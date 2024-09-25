@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>TechSavvyRepairs</title>
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <script src="https://kit.fontawesome.com/bc334be5d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="./img/Logo6.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+            
+        </nav>
+        <div class="header-text">
+            <p>Mobile Repairs / Web Developer</p>
+            <h1>Welcome to<br><span>TechSavvyRepairs.</span><br></h1>
+        </div>
+    </div>
+</div> 
+<!-------------about-------------> 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="./img/cover-img.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">"Your One-Stop Solution for Phone Repair and Website Design"</h1>
+                <p>I’m a self-taught technician specializing in device repairs and web development,
+                    Whether it's fixing hardware problems, software issues, or replacing parts, I'm here to help. 
+                    Trust me to restore your electronics to optimal performance, ensuring peace of mind.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Mobile-Devices')">Mobile-Devices</p>
+                    <p class="tab-links" onclick="opentab('Laptops & Desktops')">Laptops & Desktops</p>
+                    <p class="tab-links" onclick="opentab('Website Development')">Website Development</p>
+                </div>
+                <div class="tab-contents active-tab" id="Mobile-Devices">
+                    <ul>
+                        <li><span>Screen Replacement</i></span><br>Cracked, Shattered, or unresponsive touchscreens.</li>
+                        <li><span>Battery Replacement</span><br>Battery not charging properly, draining quickly, or no longer holding a charge.</li>
+                        <li><span>Other Services</span><br>Charging Port, Camera, Speaker, Microphone & More.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Laptops & Desktops">
+                    <ul>
+                        <li><span>Screen Replacement</span><br>Cracked, Flickering, or Non-functional screens.</li>
+                        <li><span>Battery Replacement</span><br>Battery not holding charge, draning quickly, or not charging properly.</li>
+                        <li><span>Hard Drive/SSD Replacement</span><br>Failing hard drives, slow boot times, or upgrading to SSDs for faster performance.</li>
+                        <li><span>Other Services</span><br>Operating System Reinstallation, Virus/Malware Removal, Wifi/Networking Issues, & More.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Website Development">
+                    <ul>
+                        <li><span>Custom Website Design</span><br>Creating unique, responsive website designs tailored to the client's brand.</li>
+                        <li><span>Responsive Web Design</span><br>Ensuring website work seamlessly across various devices (desktops, tablets, smartphones) with optimized layouts.</li>
+                        <li><span>Website Maintenance and Support</span><br>Ensuring websites remain secure and run smoothly.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------Services----------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1> 
+        <div class="services-list">
+            <div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h2>Mobile Repairs</h2>
+                    <p>IPhones, Androids, and Tablets</p>
+                    <a href="#">learn more</a>
+        </div>
+        <div>
+                    <i class="fa-solid fa-laptop"></i>
+                    <h2>Laptop/Desktop Repairs</h2> 
+                    <p>Dell, HP, Mac's, Chromebooks & More</p>
+                    <a href="#">learn more</a>
+         </div>
+         <div>
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    <h2>Web Development</h2> 
+                    <p>Making basic personalized Company websites or Portfolio Websites.</p>
+                    <a href="#">learn more</a>
+             </div>
+        </div>              
+    </div>
+<!---------------------Contact------------------------>
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>TechSavvyRepairs04@Gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>(480)286-6271</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-x"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © TechSavvyRepairs <i class="fa-solid fa-mug-hot"></i> Inspired by Easy Tutorials</p>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script> 
+
+</body>
+</html>
